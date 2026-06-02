@@ -111,6 +111,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
             const folderPath = '.snippet-licenses';
