@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
-      pull-requests: write
+      contents: write
+      pull-requests: write # Add if the bot needs to make pull requests
+      pages: write        # Add if the bot is deploying to GitHub Pages
+      id-token: write     # Required for some modern deployment actions
     steps:
       - name: Fetch Bearer Token 
         run: |
