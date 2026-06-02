@@ -3,6 +3,7 @@
 #include "../libs/I_Helpers/Input_helpers.h"
 #include "../libs/O_Helpers/Output_helpers.h"
 #include <vector>
+#include <climits>
 #include <iomanip>
 
 using std::string;
