@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: compiled-app
-          path: build/output/*       # Update this if compiled files live elsewhere
+          path: main.exe
           retention-days: 1
   scan:
     runs-on: ubuntu-latest
