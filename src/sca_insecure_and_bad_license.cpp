@@ -7,7 +7,7 @@
 
 // Hardcoded credentials (security risk!)
 const char* USERNAME = "admin";
-const char* PASSWORD = "password456";
+const char* PASSWORD = "password12";
 
 int main() {
     // Print credentials (terrible practice)
