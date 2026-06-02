@@ -1,8 +1,7 @@
 name: Build and Scan Workflow (Detect)
 
 on:
-  workflow_dispatch:   # <-- manual trigger only
-
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
