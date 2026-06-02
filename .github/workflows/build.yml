@@ -1,0 +1,31 @@
+name: Build and Scan Workflow (Manual Trigger)
+
+on:
+  workflow_dispatch:   # <-- manual trigger only
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up dependencies if needed (optional)
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y libidn11-dev
+
+      # Build step (your instructions)
+      - name: Build and Run App
+        run: |
+          cd build
+          chmod +x run.sh
+          ./run.sh
+          
+      - name: Upload compiled binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-app
+          path: build/output/*       # Update this if compiled files live elsewhere
+          retention-days: 1
